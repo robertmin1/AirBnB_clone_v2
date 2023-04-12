@@ -4,6 +4,7 @@ from fabric.api import local
 from datetime import datetime
 
 def do_pack():
+    """Create a tar gzipped archive of the directory web_static."""
     try:
         now = datetime.now().strftime("%Y%m%d%H%M%S")
         local("mkdir -p versions")
